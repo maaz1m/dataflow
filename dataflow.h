@@ -17,6 +17,19 @@
 #include "llvm/IR/CFG.h"
 
 namespace llvm {
+	class Framework{
+	public:
+		//entry basic block
+		//exit basic block
+		
+		BitVector domain;
+		bool direction; // 0 means downwards and 1 means upwards
+
+		Framework();
+		bool getDirection();
+		BitVector getDomain();
+		void setDirection(bool dir);
+	};
 
 // Add definitions (and code, depending on your strategy) for your dataflow
 // abstraction here.
