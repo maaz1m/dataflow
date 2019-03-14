@@ -22,29 +22,22 @@ namespace llvm {
 	{
 		BitVector IN;
 		BitVector OUT;
-		block(){
-			IN.clear();
-			OUT.clear();
-		}
 	};
 
 	class Framework{
 	public:
 		//entry basic block
 		//exit basic block
-		Function *func;
 		std::map<BasicBlock*, block> referal;
 		BitVector (*meet_function)(std::vector<BitVector> v); // meet function
-		BitVector (*transform_function)(BitVector input, BasicBlock *ptr); //gives OUT bitvector
-		BitVector domain; //
+		BitVector (*transform_function)(BitVector input, std::vector<void*> domain, BasicBlock *ptr); //gives OUT bitvector
 		bool direction; // 0 means downwards and 1 means upwards
 		Framework();
-		Framework(Function F,BitVector init, bool dir, BitVector(*mf)(std::vector<BitVector> v), BitVector (*tf)(BitVector input, BasicBlock *ptr));
-
+		Framework(Function &F,BitVector init, bool dir, BitVector(*mf)(std::vector<BitVector> v), BitVector (*tf)(BitVector input,std::vector<void*> domain, BasicBlock *ptr));
+		// init dir mf tf
 		bool getDirection();
-		BitVector getDomain();
 		void setDirection(bool dir);
-		void runAnalysis();
+		void runAnalysis(Function &func, std::vector<void*> domain, BitVector boundary);
 	};
 
 // Add definitions (and code, depending on your strategy) for your dataflow
