@@ -38,7 +38,9 @@ namespace llvm {
 		bool getDirection();
 		void setDirection(bool dir);
 		void runAnalysis(Function &func, std::vector<void*> domain, BitVector boundary);
+		void print_bitvec(BitVector temp);
 	};
+	
 
 // Add definitions (and code, depending on your strategy) for your dataflow
 // abstraction here.

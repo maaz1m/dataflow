@@ -51,6 +51,27 @@ namespace {
 		return result;
 	}
 
+	void print_all (Function &F , std::map<BasicBlock*,block>referal,std::vector<void*> domain){
+		for (Function::iterator b = F.begin(); b!=F.end() ; ++b)
+		{
+			BasicBlock* bl = &*b;
+			BitVector out = referal[bl].OUT;
+			std::vector<Expression> x;
+			for (int i = 0; i < out.size(); ++i)
+			{
+				if (out[i]==1)
+				{
+					Expression* currExp = (Expression*)(domain[i]);
+					x.push_back(*currExp);
+				}
+			}
+			printf("%d\n", x.size());
+			printSet(&x);
+			x.clear();
+		}
+		outs()<<"all printing done\n";
+	}
+
 	BitVector transferFunction(BitVector input, std::vector<void*> domain, BasicBlock* block)
 	{
 		int domainSize = domain.size();
@@ -130,6 +151,7 @@ namespace {
 			{
 				outs() << "Expression: " << ((Expression*)element)->toString() << '\n';
 			}
+			outs()<<"Domain done \n";
 
 			BitVector boundary(domain.size(), 1);
 			BitVector init(domain.size(), 0);
@@ -138,8 +160,10 @@ namespace {
 			BitVector (*tf)(BitVector input,std::vector<void*> domain, BasicBlock *ptr);
 			tf = &transferFunction;
 			Framework pass(F,init,0,mf,tf);
+			outs()<<"Frameword init \n";
 			pass.runAnalysis(F, domain, boundary);
-
+			outs()<<"analysis done \n";
+			print_all(F,pass.referal,domain);
 			// Did not modify the incoming Function.
 			return false;
 		}

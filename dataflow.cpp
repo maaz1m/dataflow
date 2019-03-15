@@ -40,12 +40,14 @@ namespace llvm {
 			//initialise the domain and lattice
 			if(BasicBlock* block = dyn_cast<BasicBlock>(func.begin()))
 			{
-				referal[block].IN = boundary; 	
+				referal[block].IN = boundary;
 			}	
 			while(converge== false){
 				converge =true;
 				//if either sets a bitvector then make converge = false
+				int count = 0;
 				for(Function::iterator FI = func.begin(),FE = func.end(); FI!=FE;++FI){
+					count++;
 					BasicBlock* block = &*FI;
 					std::vector<BitVector> v;
 					for (pred_iterator pit = pred_begin(block), pet = pred_end(block); pit != pet; ++pit){ //enlist all pred
@@ -57,8 +59,11 @@ namespace llvm {
 					}
 					referal[block].IN = meet_function(v); // do in 
 					BitVector temp = transform_function(referal[block].IN,domain , block); //transform
-					if (temp == referal[block].IN){continue;} //check transform
+					if (temp == referal[block].OUT){continue;} //check transform
 					converge = false; //if transforms then has not converged
+					// print_bitvec(referal[block].IN);
+					// print_bitvec(referal[block].OUT);
+					// print_bitvec(boundary);
 					referal[block].OUT = temp;
 				}
 
@@ -88,7 +93,7 @@ namespace llvm {
 					}
 					referal[block].IN = meet_function(v); // do in 
 					BitVector temp = transform_function(referal[block].IN,domain , block); //transform
-					if (temp == referal[block].IN){continue;} //check transform
+					if (temp == referal[block].OUT){continue;} //check transform
 					converge = false; //if transforms then has not converged
 					referal[block].OUT = temp;
 				}
@@ -100,6 +105,21 @@ namespace llvm {
 
 		
 		
+	}
+	void Framework::print_bitvec(BitVector temp){
+		for (int i = 0; i < temp.size(); ++i)
+		{
+			if (temp[i]==0)
+			{
+				printf("0");
+			}
+			else
+			{
+				printf("1");
+			}
+		}
+		printf("-\n");
+		return;
 	}
   // Add code for your dataflow abstraction here.
 }
