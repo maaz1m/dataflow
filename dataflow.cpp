@@ -45,7 +45,7 @@ namespace llvm {
 			while(converge== false){
 				converge =true;
 				//if either sets a bitvector then make converge = false
-				int count = 0;
+				int count = 0
 				for(Function::iterator FI = func.begin(),FE = func.end(); FI!=FE;++FI){
 					count++;
 					BasicBlock* block = &*FI;
