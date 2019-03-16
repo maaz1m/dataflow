@@ -24,9 +24,61 @@ namespace {
     return -1;
   }
 
+  int findInstruction(Instruction* v, std::vector<void*> domain)
+  {
+    for (unsigned i = 0; i < domain.size(); ++i)
+    {
+      if(v == ((Instruction*)domain[i]))
+      {
+        return i;
+      }
+    }
+    return -1;
+  }
+
   BitVector transferFunction(BitVector input, std::vector<void*> domain, BasicBlock* block)
   {
-    //Write transfer function here
+        int domainSize = domain.size();
+    BitVector defSet(domainSize);
+    BitVector useSet(domainSize);
+
+    int index;
+    for (BasicBlock::iterator i = block->begin(); i != block->end(); ++i) {
+        // Locally exposed uses
+        Instruction* instruction_ptr = &*i;
+        // Phi nodes: add operands to the list we store in transferOutput
+        if (PHINode* phi_instruction = dyn_cast<PHINode>(instruction_ptr))
+        {
+          continue;
+        }
+
+        //Non-phi nodes: Simply add operands to the use set
+        else {
+            for (User::op_iterator opnd = i->op_begin(), opE = i->op_end(); opnd != opE; ++opnd) {
+                Value* val = *opnd;
+                if (isa<Instruction>(val) || isa<Argument>(val)) {
+                    index = findVal(val, domain);
+                    // Add to useSet only if not already defined in the block somewhere earlier
+                    if (!defSet[index])
+                        useSet.set(index);
+                }
+            }
+        }
+
+        // Definitions
+        index = findInstruction(instruction_ptr, domain);
+        if (index != -1)
+            defSet.set(index);
+    }
+
+    // Transfer function = useSet U (input - defSet)
+
+    BitVector result = defSet.flip();
+    // input - defSet = input INTERSECTION Complement of defSet
+    result &= input;
+    result |= useSet;
+
+    return result; 
   }
 
   BitVector meet(std::vector<BitVector> inputs)
