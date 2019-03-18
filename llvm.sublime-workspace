@@ -1,0 +1,993 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Get",
+				"getElementsByTagName\tmethod"
+			],
+			[
+				"getEl",
+				"getElementsByTagName\tmethod"
+			],
+			[
+				"TH",
+				"TH_ACK"
+			],
+			[
+				"lis",
+				"list_of_dst"
+			],
+			[
+				"list",
+				"list_of_src"
+			],
+			[
+				"inet",
+				"inet_to_str"
+			],
+			[
+				"ip",
+				"ip_count"
+			],
+			[
+				"make_",
+				"make_sections"
+			],
+			[
+				"nam",
+				"names\tconst"
+			],
+			[
+				"pass",
+				"password"
+			],
+			[
+				"page_table_",
+				"page_table_fault"
+			],
+			[
+				"left_cor",
+				"left_corner_column"
+			],
+			[
+				"left_con",
+				"left_corner_column"
+			],
+			[
+				"left_corne",
+				"left_corner_row"
+			],
+			[
+				"right_cor",
+				"right_corner_column"
+			],
+			[
+				"right_corner_",
+				"right_corner_row"
+			],
+			[
+				"left_corner_",
+				"left_corner_column"
+			],
+			[
+				"right_corn",
+				"right_corner_row"
+			],
+			[
+				"right_corner",
+				"right_corner_column"
+			],
+			[
+				"left_",
+				"left_corner_row"
+			],
+			[
+				"right_c",
+				"right_corner_column"
+			],
+			[
+				"right_",
+				"right_corner_column"
+			],
+			[
+				"left_co",
+				"left_corner_column"
+			],
+			[
+				"colum",
+				"columns"
+			],
+			[
+				"tmep_",
+				"temp_left"
+			],
+			[
+				"remaining",
+				"remaining_length"
+			],
+			[
+				"print_",
+				"print_final"
+			],
+			[
+				"location",
+				"location_pref"
+			],
+			[
+				"plane_",
+				"plane_chosen"
+			],
+			[
+				"rebuff",
+				"rebuffer_time_one"
+			],
+			[
+				"fet",
+				"fetch_time_one"
+			],
+			[
+				"algo",
+				"algo_1_f"
+			],
+			[
+				"index_left",
+				"index_left2"
+			],
+			[
+				"index_lef",
+				"index_left1"
+			],
+			[
+				"sum_",
+				"sum_r2"
+			],
+			[
+				"index_right",
+				"index_right2"
+			],
+			[
+				"index_righ",
+				"index_right1"
+			],
+			[
+				"index_",
+				"index_left2"
+			],
+			[
+				"curre",
+				"current_team"
+			],
+			[
+				"location_",
+				"location_chosen"
+			],
+			[
+				"current",
+				"current_team"
+			],
+			[
+				"airport",
+				"airportfree"
+			],
+			[
+				"curren",
+				"current_airport"
+			],
+			[
+				"size_",
+				"size_arr"
+			],
+			[
+				"count",
+				"count\tfunc"
+			],
+			[
+				"fetc",
+				"fetch_time"
+			],
+			[
+				"buf",
+				"bufsizeList"
+			],
+			[
+				"bu",
+				"bufsizeList"
+			],
+			[
+				"bitrat",
+				"bitrate_time"
+			],
+			[
+				"rebuf",
+				"rebufferList"
+			],
+			[
+				"fiel",
+				"filenames"
+			],
+			[
+				"algo_",
+				"algo_1"
+			],
+			[
+				"alg",
+				"algo_2"
+			],
+			[
+				"al",
+				"algo_1"
+			],
+			[
+				"file",
+				"filenames"
+			],
+			[
+				"load",
+				"load_time_max"
+			],
+			[
+				"page",
+				"pages"
+			],
+			[
+				"dns",
+				"dns_requests"
+			],
+			[
+				"obje",
+				"object_render"
+			],
+			[
+				"num",
+				"num_objects"
+			],
+			[
+				"graph",
+				"graph_time_y"
+			],
+			[
+				"main",
+				"main_url"
+			],
+			[
+				"re",
+				"requests"
+			],
+			[
+				"time",
+				"time_count"
+			],
+			[
+				"gra",
+				"graph_time_y"
+			],
+			[
+				"grap",
+				"graph_list_x"
+			],
+			[
+				"li",
+				"list_of_folders"
+			],
+			[
+				"mim",
+				"minimum_rtt"
+			],
+			[
+				"mi",
+				"minimum_wait"
+			],
+			[
+				"ob",
+				"object_types_all"
+			],
+			[
+				"object",
+				"object_types_all"
+			],
+			[
+				"object_",
+				"object_types_all"
+			],
+			[
+				"ma",
+				"Max"
+			],
+			[
+				"aver",
+				"average_object_size"
+			],
+			[
+				"objec",
+				"object_types_all"
+			],
+			[
+				"obj",
+				"obj_types"
+			],
+			[
+				"tot",
+				"tot_page_size"
+			],
+			[
+				"wait",
+				"wait_time"
+			],
+			[
+				"check",
+				"check_satisfies"
+			],
+			[
+				"satisfy",
+				"satisfy_them"
+			],
+			[
+				"check_",
+				"check_regular_imp"
+			],
+			[
+				"satisf",
+				"satisfy_all"
+			],
+			[
+				"number",
+				"number_of_values"
+			],
+			[
+				"cars",
+				"cars_passed"
+			],
+			[
+				"mutex",
+				"mutex_car"
+			],
+			[
+				"MAX_PAS",
+				"MAX_PASS"
+			],
+			[
+				"pthread",
+				"pthread_cond_t"
+			],
+			[
+				"south",
+				"southr"
+			],
+			[
+				"pthread_",
+				"pthread_mutex_t"
+			],
+			[
+				"curr",
+				"current_cars"
+			],
+			[
+				"node_n",
+				"node_num2"
+			],
+			[
+				"node_num",
+				"node_num1"
+			],
+			[
+				"edg",
+				"edge_weight"
+			],
+			[
+				"node_",
+				"node_num1"
+			],
+			[
+				"edge",
+				"edge_inserted"
+			],
+			[
+				"edge_",
+				"edge_weight"
+			],
+			[
+				"NUM",
+				"NUM_CARS"
+			],
+			[
+				"train_",
+				"train_num"
+			],
+			[
+				"train_num",
+				"train_number"
+			],
+			[
+				"NUM_",
+				"NUM_STATIONS"
+			],
+			[
+				"pthre",
+				"pthread_cond_signal"
+			],
+			[
+				"pthread_cond_",
+				"pthread_cond_wait"
+			],
+			[
+				"MAX_PEOPL",
+				"MAX_PEOPLE-1"
+			],
+			[
+				"pthe",
+				"pthread_mutex_lock"
+			],
+			[
+				"pther",
+				"pthread_cond_t"
+			],
+			[
+				"pthrea",
+				"pthread_cond_t"
+			],
+			[
+				"ede",
+				"edges"
+			],
+			[
+				"push",
+				"push_back\tfunc"
+			],
+			[
+				"sort",
+				"sort_heap\tfunc"
+			],
+			[
+				"edges",
+				"edges"
+			],
+			[
+				"size_arr",
+				"size_arr"
+			],
+			[
+				"proab",
+				"probability"
+			],
+			[
+				"distance_on",
+				"distance_on_tank"
+			],
+			[
+				"my",
+				"my_lowercase_analyzer"
+			],
+			[
+				"lo",
+				"lowercase"
+			],
+			[
+				"in",
+				"index_name"
+			],
+			[
+				"res",
+				"restaurant"
+			],
+			[
+				"r",
+				"restaurant"
+			],
+			[
+				"ca",
+				"category"
+			],
+			[
+				"cit",
+				"city_search"
+			],
+			[
+				"index",
+				"index_name"
+			],
+			[
+				"JSON_",
+				"JSON_restaurant"
+			],
+			[
+				"fun",
+				"func\tFunction"
+			],
+			[
+				"add",
+				"addReviewLike"
+			],
+			[
+				"fu",
+				"func\tFunction"
+			],
+			[
+				"C",
+				"Container"
+			],
+			[
+				"Re",
+				"Restaurant"
+			],
+			[
+				"Res",
+				"Restaurant"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "// 15-745 S18 Assignment 2: liveness.cpp\n// Group:\n////////////////////////////////////////////////////////////////////////////////\n\n#include \"llvm/IR/Function.h\"\n#include \"llvm/Pass.h\"\n#include \"llvm/Support/raw_ostream.h\"\n\n#include \"dataflow.h\"\n\nusing namespace llvm;\n\nnamespace {\n  //Helper function that finds the index of expression in domain\n  void print_all (Function &F , std::map<BasicBlock*,block>referal,std::vector<void*> domain){\n    for (Function::iterator b = F.begin(); b!=F.end() ; ++b)\n    {\n      BasicBlock* bl = &*b;\n      BitVector out = referal[bl].OUT;\n      std::vector<Expression> x;\n      for (int i = 0; i < out.size(); ++i)\n      {\n        if (out[i]==1)\n        {\n          Expression* currExp = (Expression*)(domain[i]);\n          x.push_back(*currExp);\n        }\n      }\n      printf(\"%d\\n\", x.size());\n      printSet(&x);\n      x.clear();\n    }\n    outs()<<\"all printing done\\n\";\n  }\n  int findVal(Value* v, std::vector<void*> domain)\n  {\n    for (unsigned i = 0; i < domain.size(); ++i)\n    {\n      if(v == ((Value*)domain[i]))\n      {\n        return i;\n      }\n    }\n    return -1;\n  }\n\n  int findInstruction(Instruction* v, std::vector<void*> domain)\n  {\n    for (unsigned i = 0; i < domain.size(); ++i)\n    {\n      if(v == ((Instruction*)domain[i]))\n      {\n        return i;\n      }\n    }\n    return -1;\n  }\n\n  BitVector transferFunction(BitVector input, std::vector<void*> domain, BasicBlock* block)\n  {\n        int domainSize = domain.size();\n    BitVector defSet(domainSize);\n    BitVector useSet(domainSize);\n\n    int index;\n    for (BasicBlock::iterator i = block->begin(); i != block->end(); ++i) {\n        // Locally exposed uses\n        Instruction* instruction_ptr = &*i;\n        // Phi nodes: add operands to the list we store in transferOutput\n        if (PHINode* phi_instruction = dyn_cast<PHINode>(instruction_ptr))\n        {\n          continue;\n        }\n\n        //Non-phi nodes: Simply add operands to the use set\n        else {\n            for (User::op_iterator opnd = i->op_begin(), opE = i->op_end(); opnd != opE; ++opnd) {\n                Value* val = *opnd;\n                if (isa<Instruction>(val) || isa<Argument>(val)) {\n                    index = findVal(val, domain);\n                    // Add to useSet only if not already defined in the block somewhere earlier\n                    if (!defSet[index])\n                        useSet.set(index);\n                }\n            }\n        }\n\n        // Definitions\n        index = findInstruction(instruction_ptr, domain);\n        if (index != -1)\n            defSet.set(index);\n    }\n\n    // Transfer function = useSet U (input - defSet)\n\n    BitVector result = defSet.flip();\n    // input - defSet = input INTERSECTION Complement of defSet\n    result &= input;\n    result |= useSet;\n\n    return result; \n  }\n\n  BitVector meet(std::vector<BitVector> inputs)\n  {\n    if (inputs.size()==0)\n    {\n      BitVector temp;\n      temp.clear();\n      return temp;\n    }\n    BitVector result = inputs[0];\n     for (std::vector<BitVector>::iterator i = inputs.begin(); i != inputs.end(); ++i)\n     {\n       result |= *i;\n     }\n    return result;\n  }\n\n  class Liveness : public FunctionPass {\n  public:\n    static char ID;\n\n    Liveness() : FunctionPass(ID) { }\n\n    virtual bool runOnFunction(Function& F) {\n      std::vector<void*> domain;\n\n      //Initialize domain\n      for(Function::iterator b = F.begin(); b != F.end(); ++b)\n      {\n        BasicBlock* block = &*b;\n        for (BasicBlock::iterator i = block->begin(); i != block->end(); ++i)\n        {\n          Instruction* instruction_ptr = &*i;\n          for(User::op_iterator OI = instruction_ptr->op_begin();OI!= instruction_ptr->op_end();++OI)  \n          {\n            Value *val = *OI;\n            if(isa<Instruction>(val) || isa<Argument>(val))\n            {\n              int ind =findVal(val,domain);\n              if(ind == -1)\n              {\n                domain.push_back(val);\n              }\n            }\n            if( isa<Instruction>(val))\n            {\n              outs()<<\"ins: \"<<val->getName()<<\"\\n\";\n            }\n            if(isa<Argument>(val))\n            {\n              outs()<<\"arg: \"<<val->getName()<<\"\\n\";\n            }\n          }         \n        }\n      }\n\n      for(void* element: domain)\n      {\n        outs() << \"Variables: \" << *((Value*)element)<< '\\n';\n      }\n      outs()<<\"Domain done \\n\";\n      BitVector boundary(domain.size(), 0); // FIX THIS <---------------\n      BitVector init(domain.size(), 0); // FIX THIS <---------------\n      BitVector(*mf)(std::vector<BitVector> v);\n      mf = &meet;\n      BitVector (*tf)(BitVector input,std::vector<void*> domain, BasicBlock *ptr);\n      tf = &transferFunction;\n      Framework pass(F,init,1,mf,tf);\n      outs()<<\"Frameword init \\n\";\n      pass.runAnalysis(F, domain, boundary);\n      outs()<<\"analysis done \\n\";\n      // Did not modify the incoming Function.\n\n\n      return false;\n    }\n\n    virtual void getAnalysisUsage(AnalysisUsage& AU) const {\n      AU.setPreservesAll();\n    }\n\n  private:\n  };\n\n  char Liveness::ID = 0;\n  RegisterPass<Liveness> X(\"liveness\", \"15745 Liveness\");\n}\n",
+			"file": "liveness.cpp",
+			"file_size": 4754,
+			"file_write_time": 131972238150232274,
+			"settings":
+			{
+				"buffer_size": 5156,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "available.cpp",
+			"settings":
+			{
+				"buffer_size": 4623,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "liveness-test-m2r.bc",
+			"settings":
+			{
+				"buffer_size": 2460,
+				"encoding": "Hexadecimal",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "liveness-test-m2r.ll",
+			"settings":
+			{
+				"buffer_size": 1281,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"type",
+				"Build With: TypeScript"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Add Repository"
+			],
+			[
+				"Package Control: Inst",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 451.0,
+		"history":
+		[
+			"3+2",
+			"2+@",
+			"make",
+			"build make",
+			"import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) ",
+			"import urllib,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); os.makedirs( ipp ) if not os.path.exists(ipp) else None; urllib2.install_opener( urllib2.build_opener( urllib2.ProxyHandler()) ); by = urllib2.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); open( os.path.join( ipp, pf), 'wb' ).write(by) if dh == h else None; print('Error validating download (got %s instead of %s), please try manual install' % (dh, h) if dh != h else 'Please restart Sublime Text to finish installation')",
+			"import urllib2,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); os.makedirs( ipp ) if not os.path.exists(ipp) else None; urllib2.install_opener( urllib2.build_opener( urllib2.ProxyHandler()) ); by = urllib2.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); open( os.path.join( ipp, pf), 'wb' ).write(by) if dh == h else None; print('Error validating download (got %s instead of %s), please try manual install' % (dh, h) if dh != h else 'Please restart Sublime Text to finish installation')"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/ali/Dropbox/git llvm/Dataflow"
+	],
+	"file_history":
+	[
+		"/home/ali/Dropbox/git llvm/Dataflow/llvm.sublime-project",
+		"/home/ali/Dropbox/chrome extensions/chrome-extension-template/src/background.js",
+		"/home/ali/Dropbox/chrome extensions/chrome-extension-template/manifest.json",
+		"/home/ali/Dropbox/chrome extensions/chrome-extension-template/src/content.js",
+		"/home/ali/Dropbox/chrome extensions/chrome-extension-template/src/popup.js",
+		"/home/ali/Dropbox/git llvm/Dataflow/dataflow.",
+		"/home/ali/Dropbox/chrome extensions/chrome-extension-template/src/stylesheets/popup.sublime-project",
+		"/home/ali/Downloads/catblock/manifest.json",
+		"/home/ali/Downloads/catblock/background.js",
+		"/home/ali/Dropbox/git llvm/Dataflow/dataflow.h",
+		"/home/ali/Dropbox/git llvm/Dataflow/available-support.h",
+		"/home/ali/Dropbox/git llvm/Dataflow/dataflow.cpp",
+		"/home/ali/Dropbox/chrome extensions/chrome-extension-template/license.txt",
+		"/home/ali/Dropbox/chrome extensions/chrome-extension-template/lib/mixpanel.js",
+		"/home/ali/Dropbox/chrome extensions/chrome-extension-template/lib/zepto.min.js",
+		"/home/ali/Dropbox/llvm/available-support.h",
+		"/home/ali/Dropbox/llvm/hell.c",
+		"/home/ali/Dropbox/llvm/available-support.cpp",
+		"/home/ali/Dropbox/llvm/hell.ll",
+		"/home/ali/Dropbox/llvm/dataflow.h",
+		"/home/ali/Dropbox/llvm/test_pass.cpp",
+		"/home/ali/Dropbox/llvm/dataflow.cpp",
+		"/home/ali/Dropbox/lab 2/README.txt",
+		"/home/ali/Dropbox/llvm/hello.cpp",
+		"/home/ali/Dropbox/llvm/hello.ll",
+		"/home/ali/Dropbox/llvm/Makefile",
+		"/home/ali/Dropbox/llvm/liveness.cpp",
+		"/home/ali/Dropbox/llvm/hello.bc",
+		"/home/ali/Dropbox/lab 2/dict.py",
+		"/home/ali/Dropbox/Lab1/ReadMe",
+		"/home/ali/Dropbox/cs300 taship/javascript/test.js",
+		"/home/ali/Dropbox/llvm-pass-skeleton/test.c",
+		"/home/ali/Dropbox/lab 2/part1.pcap",
+		"/home/ali/Dropbox/llvm-pass-skeleton/test.",
+		"/home/ali/Dropbox/llvm-pass-skeleton/test.ll",
+		"/home/ali/Dropbox/llvm-pass-skeleton/skeleton/Skeleton.cpp",
+		"/home/ali/Dropbox/cs300 taship/lol.hs",
+		"/home/ali/Dropbox/lab 2/lol.txt",
+		"/home/ali/Dropbox/lab 2/START",
+		"/home/ali/Dropbox/cs300 taship/javascript/questions/answers9.txt",
+		"/home/ali/Dropbox/cs300 taship/javascript/questions/answers10.txt",
+		"/home/ali/Dropbox/cs300 taship/javascript/marks_gen.py",
+		"/home/ali/Dropbox/cs300 taship/javascript/solution/key.txt",
+		"/home/ali/Dropbox/Lab1/answers/hello.txt",
+		"/home/ali/Dropbox/Lab1/webserver_original.py",
+		"/home/ali/Dropbox/Lab1/webserver.py",
+		"/tmp/mozilla_ali0/test.js",
+		"/home/ali/Dropbox/OS/20100284 (1)/OS/main.c",
+		"/home/ali/Downloads/final_20100284/question 4/Q4-20100284.c",
+		"/home/ali/Dropbox/Algorithms/Assignment -4/question 1/Q1-20100284.c",
+		"/home/ali/Dropbox/Algorithms/Assignment -4/question 2/Q2-output-A.txt",
+		"/home/ali/Dropbox/Algorithms/Assignment -4/question 2/a",
+		"/home/ali/Dropbox/Algorithms/Assignment -4/question 2/Q2-20100284.c",
+		"/home/ali/Dropbox/Algorithms/Assignment -4/question 3/Q3-20100284.c",
+		"/home/ali/Dropbox/Algorithms/Assignment -4/question 2/Q2-output-C.txt",
+		"/home/ali/Dropbox/Algorithms/Assignment -4/question 2/Q2-output-B.txt",
+		"/home/ali/Dropbox/Algorithms/Assignment -4/question 2/b",
+		"/home/ali/Dropbox/OS/part3.c",
+		"/home/ali/Dropbox/OS/main.c",
+		"/home/ali/Downloads/final_20100284/testcases-CS310-assign4/testcases-CS310-Assign4/Q4-output-C.txt",
+		"/home/ali/Downloads/final_20100284/testcases-CS310-assign4/testcases-CS310-Assign4/Q4-output-B.txt",
+		"/home/ali/Dropbox/Algorithms/Assignment -4/testcases-CS310-assign4/testcases-CS310-Assign4/Q1-output-A.txt",
+		"/home/ali/Downloads/final_20100284/question 2/Q2-input-A.txt",
+		"/home/ali/Downloads/final_20100284/question 5/q5 testcase1.txt",
+		"/home/ali/Downloads/final_20100284/question 3/Q3-20100284.c",
+		"/home/ali/Downloads/final_20100284/question 5/q5 testcase2.txt",
+		"/home/ali/Downloads/final_20100284/question 5/q5 testcase3.txt",
+		"/home/ali/Downloads/final_20100284/question 5/q5 test case 1.txt",
+		"/home/ali/Downloads/final_20100284/question 5/q5 test case 2.txt",
+		"/home/ali/Downloads/final_20100284/question 5/q5 test case 3.txt",
+		"/home/ali/Downloads/final_20100284/question 5/Q5-20100284.c",
+		"/home/ali/Downloads/final_20100284/question 1/Q1-20100284.c",
+		"/home/ali/Downloads/final_20100284/question 2/Q2-20100284.c",
+		"/home/ali/Downloads/final_20100284/testcases-CS310-assign4/testcases-CS310-Assign4/Q4-output-A.txt",
+		"/home/ali/Downloads/final_20100284/testcases-CS310-assign4/testcases-CS310-Assign4/Q3-output-B.txt",
+		"/home/ali/Downloads/final_20100284/testcases-CS310-assign4/testcases-CS310-Assign4/Q3-output-A.txt",
+		"/home/ali/Downloads/final_20100284/question 2/Q2-input-C.txt",
+		"/home/ali/Downloads/final_20100284/question 2/Q2-input-B.txt",
+		"/home/ali/Downloads/final_20100284/testcases-CS310-assign4/testcases-CS310-Assign4/Q2-output-B.txt",
+		"/home/ali/Downloads/final_20100284/testcases-CS310-assign4/testcases-CS310-Assign4/Q2-output-C.txt",
+		"/home/ali/Downloads/final_20100284/testcases-CS310-assign4/testcases-CS310-Assign4/Q2-output-A.txt",
+		"/home/ali/Downloads/final_20100284/testcases-CS310-assign4/testcases-CS310-Assign4/Q1-output-D.txt",
+		"/home/ali/Downloads/final_20100284/testcases-CS310-assign4/testcases-CS310-Assign4/Q1-output-E.txt",
+		"/home/ali/Downloads/final_20100284/testcases-CS310-assign4/testcases-CS310-Assign4/Q1-output-C.txt",
+		"/home/ali/Downloads/final_20100284/testcases-CS310-assign4/testcases-CS310-Assign4/Q1-output-B.txt",
+		"/home/ali/Downloads/final_20100284/testcases-CS310-assign4/testcases-CS310-Assign4/Q1-output-A.txt",
+		"/home/ali/Dropbox/Algorithms/Assignment -4/question 3/test1",
+		"/home/ali/Dropbox/Algorithms/Assignment -4/2-testcases-CS310-assign4/q5 test case 1.txt",
+		"/home/ali/Dropbox/OS/assignment/part_2/output.txt",
+		"/home/ali/Dropbox/OS/assignment/part_2/addresses.txt",
+		"/home/ali/Dropbox/OS/assignment/part_2/test.c",
+		"/home/ali/Dropbox/OS/assignment/part_1/addresses.txt",
+		"/home/ali/Dropbox/OS/20100284/ch3/dynamic/simple1.c",
+		"/home/ali/Dropbox/OS/assignment/part_1/main.c",
+		"/home/ali/Dropbox/OS/assignment/part_2/main.c",
+		"/home/ali/Dropbox/RR.txt",
+		"/home/ali/Dropbox/Algorithms/Assignment -4/question 4/Q4-20100284.c",
+		"/home/ali/Dropbox/Algorithms/Assignment -4/question 5/Q5-20100284.c",
+		"/home/ali/Dropbox/OS/assignment/part_2/DATA_STORE.bin",
+		"/home/ali/Downloads/assignment(2)/part_2/main.c",
+		"/home/ali/Dropbox/OS/assignment/part_1/output.txt",
+		"/home/ali/Dropbox/OS/assignment/part_1/BACKING_STORE.bin",
+		"/home/ali/Dropbox/Algorithms/Assignment-3/question 4/20100284_q4.c",
+		"/home/ali/Dropbox/Algorithms/Assignment-3/question 3/20100284_q3.c",
+		"/home/ali/Dropbox/Algorithms/Assignment-3/question 2/20100284_q2.c",
+		"/home/ali/Dropbox/Algorithms/20100284_3/Assignment-3/question 2/test3",
+		"/home/ali/Dropbox/Algorithms/Assignment-3/test cases assignment 3/q2 test case - output.txt",
+		"/home/ali/Dropbox/Algorithms/Assignment-3/test cases assignment 3/q2 test case.txt",
+		"/home/ali/Dropbox/Algorithms/Assignment-3/question 1/test1.txt",
+		"/home/ali/Dropbox/Algorithms/Assignment-3/question 1/20100284_q1.c",
+		"/home/ali/Dropbox/Algorithms/Assignment -4/2-testcases-CS310-assign4/q5 test case 3 - output.txt",
+		"/home/ali/Dropbox/Algorithms/Assignment-3/question 2/test3",
+		"/home/ali/Dropbox/Algorithms/Assignment -4/2-testcases-CS310-assign4/q5 test case 1 - output.txt",
+		"/home/ali/Dropbox/Algorithms/Assignment -4/question 5/Q4-20100284.c",
+		"/home/ali/Dropbox/Algorithms/Assignment -4/question 4/test1",
+		"/home/ali/Dropbox/Algorithms/Assignment -4/question 4/test2",
+		"/home/ali/Dropbox/Algorithms/Assignment -4/2-testcases-CS310-assign4/q4 test case - output.txt",
+		"/home/ali/Dropbox/Algorithms/Assignment -4/question 4/Q4-output-B.txt",
+		"/home/ali/Dropbox/Algorithms/Assignment -4/question 4/Q4-output-C.txt",
+		"/home/ali/Dropbox/Algorithms/Assignment -4/question 4/Q4-output-A.txt",
+		"/home/ali/Dropbox/Algorithms/Assignment -4/2-testcases-CS310-assign4/q4 test case.txt",
+		"/home/ali/Dropbox/Algorithms/Assignment -4/question 2/test1",
+		"/home/ali/Dropbox/Algorithms/Assignment -4/question 2/Q1-20100284.c",
+		"/home/ali/Dropbox/Algorithms/Assignment -4/question 1/test1",
+		"/home/ali/Dropbox/Algorithms/Assignment -4/question 1/20100284_q3.c",
+		"/home/ali/Dropbox/Algorithms/Assignment-3/question 2/test2",
+		"/home/ali/.cache/.fr-O9HFMW/q2 test case - output.txt",
+		"/home/ali/Dropbox/OS/assignment/part_1/Makefile"
+	],
+	"find":
+	{
+		"height": 22.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "liveness.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5156,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								595,
+								605
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "available.cpp",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 4623,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1107,
+								1107
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 528.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "liveness-test-m2r.bc",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2460,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "liveness-test-m2r.ll",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1281,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								510,
+								510
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 22.0
+	},
+	"input":
+	{
+		"height": 38.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.doc":
+	{
+		"height": 0.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "llvm.sublime-project",
+	"replace":
+	{
+		"height": 40.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/Dropbox/chrome extensions/chrome-extension-template/src/chrome_ext.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 155.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

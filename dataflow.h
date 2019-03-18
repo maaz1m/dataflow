@@ -30,10 +30,11 @@ namespace llvm {
 		//exit basic block
 		std::map<BasicBlock*, block> referal;
 		BitVector (*meet_function)(std::vector<BitVector> v); // meet function
-		BitVector (*transform_function)(BitVector input, std::vector<void*> domain, BasicBlock *ptr); //gives OUT bitvector
+		//the referal in the tranfer function is for PHI node catering
+		BitVector (*transform_function)(BitVector input, std::vector<void*> domain, BasicBlock *ptr,std::map<BasicBlock*, block> &referal); //gives OUT bitvector
 		bool direction; // 0 means downwards and 1 means upwards
 		Framework();
-		Framework(Function &F,BitVector init, bool dir, BitVector(*mf)(std::vector<BitVector> v), BitVector (*tf)(BitVector input,std::vector<void*> domain, BasicBlock *ptr));
+		Framework(Function &F,BitVector init, bool dir, BitVector(*mf)(std::vector<BitVector> v), BitVector (*tf)(BitVector input,std::vector<void*> domain, BasicBlock *ptr,std::map<BasicBlock*, block> &referal));
 		// init dir mf tf
 		bool getDirection();
 		void setDirection(bool dir);

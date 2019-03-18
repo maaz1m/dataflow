@@ -72,7 +72,7 @@ namespace {
 		outs()<<"all printing done\n";
 	}
 
-	BitVector transferFunction(BitVector input, std::vector<void*> domain, BasicBlock* block)
+	BitVector transferFunction(BitVector input, std::vector<void*> domain, BasicBlock* block,std::map<BasicBlock*, llvm::block> &referal)
 	{
 		int domainSize = domain.size();
 		BitVector Gen(domainSize);
@@ -157,7 +157,7 @@ namespace {
 			BitVector init(domain.size(), 0);
 			BitVector(*mf)(std::vector<BitVector> v);
 			mf = &meet;
-			BitVector (*tf)(BitVector input,std::vector<void*> domain, BasicBlock *ptr);
+			BitVector (*tf)(BitVector input,std::vector<void*> domain, BasicBlock *ptr,std::map<BasicBlock*, block> &referal);
 			tf = &transferFunction;
 			Framework pass(F,init,0,mf,tf);
 			outs()<<"Frameword init \n";

@@ -10,7 +10,7 @@ namespace llvm {
 		direction = 0;
 	}
 
-	Framework::Framework(Function &F , BitVector init, bool dir, BitVector(*mf)(std::vector<BitVector> v), BitVector (*tf)(BitVector input,std::vector<void*> domain, BasicBlock *ptr)){
+	Framework::Framework(Function &F , BitVector init, bool dir, BitVector(*mf)(std::vector<BitVector> v), BitVector (*tf)(BitVector input,std::vector<void*> domain, BasicBlock *ptr,std::map<BasicBlock*, block> &referal)){
 		referal.clear();
 		for(Function::iterator FI = F.begin(),FE = F.end(); FI!=FE;++FI){
 			BasicBlock* b = &*FI;
@@ -21,6 +21,7 @@ namespace llvm {
 		transform_function = tf;
 		//both functions has been initialised
 		direction = dir; // 0 means downwards and 1 means upwards
+		printf("initialised\n");
 		
 	}
 
@@ -36,6 +37,7 @@ namespace llvm {
 	void Framework::runAnalysis(Function &func, std::vector<void*> domain, BitVector boundary){
 		if(!direction){
 			bool converge = false;
+			printf("run\n");
 
 			//initialise the domain and lattice
 			if(BasicBlock* block = dyn_cast<BasicBlock>(func.begin()))
@@ -45,11 +47,15 @@ namespace llvm {
 			while(converge== false){
 				converge =true;
 				//if either sets a bitvector then make converge = false
-				int count = 0
+				int count = 0;
 				for(Function::iterator FI = func.begin(),FE = func.end(); FI!=FE;++FI){
 					count++;
 					BasicBlock* block = &*FI;
 					std::vector<BitVector> v;
+					if (block == &*func.begin())
+					{
+						v.push_back(boundary);
+					}
 					for (pred_iterator pit = pred_begin(block), pet = pred_end(block); pit != pet; ++pit){ //enlist all pred
 						BasicBlock* b = *pit;
 						if(b)
@@ -58,7 +64,7 @@ namespace llvm {
 						}
 					}
 					referal[block].IN = meet_function(v); // do in 
-					BitVector temp = transform_function(referal[block].IN,domain , block); //transform
+					BitVector temp = transform_function(referal[block].IN,domain , block,referal); //transform
 					if (temp == referal[block].OUT){continue;} //check transform
 					converge = false; //if transforms then has not converged
 					// print_bitvec(referal[block].IN);
@@ -72,29 +78,55 @@ namespace llvm {
 		}
 		else{
 			bool converge = false;
-
+			printf("direction backwards\n");
 			//initialise the domain and lattice
+			print_bitvec(boundary);
 			if(BasicBlock* block = dyn_cast<BasicBlock>(func.end()))
 			{
-				referal[block].IN = boundary; 	
+				referal[block].IN = boundary;
+			print_bitvec(referal[block].IN);
+
 			}	
 			while(converge== false){
 				converge =true;
+				int count = 0;
 				//if either sets a bitvector then make converge = false
 				for(Function::iterator FI = func.begin(),FE = func.end(); FI!=FE;--FE){
+					count++;
+					printf("%d\n", count);
 					BasicBlock* block = &*FE;
+					print_bitvec(referal[block].IN);
+					if(!block){continue;}
 					std::vector<BitVector> v;
+					if (block == &*func.end())
+					{
+						v.push_back(boundary);
+					}
 					for (succ_iterator sit = succ_begin(block), set = succ_end(block); sit != set; ++sit){ //enlist all pred
+					printf("succ_iterating\n");
 						BasicBlock* b = *sit;
 						if(b)
 						{
 							v.push_back(referal[b].OUT);
 						}
 					}
+					printf("succ_iterated\n");
+
+					print_bitvec(referal[block].IN);
 					referal[block].IN = meet_function(v); // do in 
-					BitVector temp = transform_function(referal[block].IN,domain , block); //transform
+					print_bitvec(referal[block].IN);
+
+					printf("met func\n");
+					print_bitvec(referal[block].IN);
+					BitVector temp = transform_function(referal[block].IN , domain , block,referal); //transform
+					printf("transformed\n");
+
 					if (temp == referal[block].OUT){continue;} //check transform
 					converge = false; //if transforms then has not converged
+					print_bitvec(referal[block].IN);
+					print_bitvec(referal[block].OUT);
+					print_bitvec(boundary);
+					
 					referal[block].OUT = temp;
 				}
 
