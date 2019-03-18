@@ -110,35 +110,27 @@ namespace {
           // Phi nodes: add operands to the list we store in transferOutput
           if (PHINode* phi_instruction = dyn_cast<PHINode>(instruction_ptr))
           {
-            //phi node instructions, need pointer to their individual blocks
-            // outs()<<"checking"<<*instruction_ptr<<"\n";
             for (unsigned ind = 0; ind < phi_instruction->getNumIncomingValues(); ind++)
             {
                Value* val = phi_instruction->getIncomingValue(ind); //get value from the block above
                 if (isa<Instruction>(val) || isa<Argument>(val)) // if a value that we actually need
                 {
                     BasicBlock* valBlock = phi_instruction->getIncomingBlock(ind); //get blcok of that very instruction
-                    // referal has no mapping for this block, then create one
                     if(referal.find(valBlock) == referal.end())
                     {
-                      // outs()<<"can't find block\n";
                       continue;
                     }  
                     if (valBlock != block)
                     {
-                      // outs()<<"removed bits"<<llvm::getShortValueName(val)<<"\n";
                       index = findVal(val, domain);
                       referal[valBlock].IN.reset(index);
                       result.reset(index); 
                     }
                 }
             }
-            // outs()<<"-----\n";
           }
-          
         }
       }
-      // outs()<<"succ\n";
     }
 
     for (BasicBlock::reverse_iterator i = block->rbegin(); i != block->rend(); ++i) {
