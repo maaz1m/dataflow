@@ -69,12 +69,12 @@ namespace {
 		return result;
 	}
 
-	void print_all (Function &F , std::map<BasicBlock*,block>referal,std::vector<void*> domain){
+	void print_all (Function &F , std::map<BasicBlock*,block>state,std::vector<void*> domain){
 		for (Function::iterator b = F.begin(); b!=F.end() ; ++b)
 		{
 			BasicBlock* bl = &*b;
-			BitVector out = referal[bl].OUT;
-			BitVector in = referal[bl].IN;
+			BitVector out = state[bl].OUT;
+			BitVector in = state[bl].IN;
 			std::vector<Expression> x;
 			for (int i = 0; i < in.size(); ++i)
 			{
@@ -101,7 +101,7 @@ namespace {
 		}
 	}
 
-	BitVector transferFunction(BitVector input, std::vector<void*> domain, BasicBlock* block,std::map<BasicBlock*, llvm::block> &referal)
+	BitVector transferFunction(BitVector input, std::vector<void*> domain, BasicBlock* block,std::map<BasicBlock*, llvm::block> &state)
 	{
 		int domainSize = domain.size();
 		BitVector Gen(domainSize);
@@ -200,7 +200,7 @@ namespace {
 			BitVector init(domain.size(), 0);
 			BitVector(*mf)(std::vector<BitVector> v);
 			mf = &meet;
-			BitVector (*tf)(BitVector input,std::vector<void*> domain, BasicBlock *ptr,std::map<BasicBlock*, block> &referal);
+			BitVector (*tf)(BitVector input,std::vector<void*> domain, BasicBlock *ptr,std::map<BasicBlock*, block> &state);
 			tf = &transferFunction;
 			Framework pass(F,init,0,mf,tf);
 			// outs()<<"Frameword init \n";
@@ -210,7 +210,7 @@ namespace {
 			outs()<<"=======================================================================================\n";
 			outs()<<"\nFollowing is the final block level IN and OUT set representation after Convergence:\n";
 			outs()<<"=======================================================================================\n";
-			print_all(F,pass.referal,domain);
+			print_all(F,pass.state,domain);
 			// Did not modify the incoming Function.
 			return false;
 		}

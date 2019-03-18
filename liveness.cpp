@@ -26,12 +26,12 @@ namespace {
     outs()<<llvm::getShortValueName(y[y.size()-1])<<"}\n";
     return;
   }
-  void print_all (Function &F , std::map<BasicBlock*,block>referal,std::vector<void*> domain){
+  void print_all (Function &F , std::map<BasicBlock*,block>state,std::vector<void*> domain){
     for (Function::iterator b = F.begin(); b!=F.end() ; ++b)
     {
       BasicBlock* bl = &*b;
-      BitVector out = referal[bl].OUT;
-      BitVector in = referal[bl].IN;
+      BitVector out = state[bl].OUT;
+      BitVector in = state[bl].IN;
       std::vector<Value*> x;
       std::vector<Value*> y;
       
@@ -90,7 +90,7 @@ namespace {
     return -1;
   }
 
-  BitVector transferFunction(BitVector input, std::vector<void*> domain, BasicBlock* block, std::map<BasicBlock*,llvm::block> &referal)
+  BitVector transferFunction(BitVector input, std::vector<void*> domain, BasicBlock* block, std::map<BasicBlock*,llvm::block> &state)
   {
     int domainSize = domain.size();
     BitVector defSet(domainSize,0);
@@ -116,14 +116,14 @@ namespace {
                 if (isa<Instruction>(val) || isa<Argument>(val)) // if a value that we actually need
                 {
                     BasicBlock* valBlock = phi_instruction->getIncomingBlock(ind); //get blcok of that very instruction
-                    if(referal.find(valBlock) == referal.end())
+                    if(state.find(valBlock) == state.end())
                     {
                       continue;
                     }  
                     if (valBlock != block)
                     {
                       index = findVal(val, domain);
-                      referal[valBlock].IN.reset(index);
+                      state[valBlock].IN.reset(index);
                       result.reset(index); 
                     }
                 }
@@ -148,8 +148,8 @@ namespace {
               if (isa<Instruction>(val) || isa<Argument>(val)) // if a value that we actually need
               {
                   BasicBlock* valBlock = phi_instruction->getIncomingBlock(ind); //get blcok of that very instruction
-                  // referal has no mapping for this block, then create one
-                  if(referal.find(valBlock) == referal.end())
+                  // state has no mapping for this block, then create one
+                  if(state.find(valBlock) == state.end())
                   {
                     outs()<<"block doesn't exist\n";
                     continue;
@@ -262,7 +262,7 @@ namespace {
       BitVector init(domain.size(), 0); 
       BitVector(*mf)(std::vector<BitVector> v);
       mf = &meet;
-      BitVector (*tf)(BitVector input,std::vector<void*> domain, BasicBlock *ptr, std::map<BasicBlock*, block> &referal);
+      BitVector (*tf)(BitVector input,std::vector<void*> domain, BasicBlock *ptr, std::map<BasicBlock*, block> &state);
       tf = &transferFunction;
       Framework pass(F,init,1,mf,tf);
       pass.runAnalysis(F, domain, boundary);
@@ -272,7 +272,7 @@ namespace {
       outs()<<"\nFollowing is the final block level IN and OUT set representation after Convergence:\n";
       outs()<<"=======================================================================================\n";
       // Did not modify the incoming Function.
-      print_all(F,pass.referal,domain);
+      print_all(F,pass.state,domain);
 
 
       return false;
