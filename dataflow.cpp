@@ -21,8 +21,6 @@ namespace llvm {
 		transform_function = tf;
 		//both functions has been initialised
 		direction = dir; // 0 means downwards and 1 means upwards
-		printf("initialised\n");
-		
 	}
 
 
@@ -37,19 +35,17 @@ namespace llvm {
 	void Framework::runAnalysis(Function &func, std::vector<void*> domain, BitVector boundary){
 		if(!direction){
 			bool converge = false;
-			printf("run\n");
-
 			//initialise the domain and lattice
 			if(BasicBlock* block = dyn_cast<BasicBlock>(func.begin()))
 			{
 				referal[block].IN = boundary;
 			}	
+			int count = 0;
 			while(converge== false){
 				converge =true;
 				//if either sets a bitvector then make converge = false
-				int count = 0;
+				count++;
 				for(Function::iterator FI = func.begin(),FE = func.end(); FI!=FE;++FI){
-					count++;
 					BasicBlock* block = &*FI;
 					std::vector<BitVector> v;
 					if (block == &*func.begin())
@@ -72,65 +68,56 @@ namespace llvm {
 					// print_bitvec(boundary);
 					referal[block].OUT = temp;
 				}
+			printf("\nIteration #%d is complete...\n\n",count);
 
 			}
 			
 		}
 		else{
 			bool converge = false;
-			printf("direction backwards\n");
 			//initialise the domain and lattice
-			print_bitvec(boundary);
-			if(BasicBlock* block = dyn_cast<BasicBlock>(func.end()))
+			if(BasicBlock* block = dyn_cast<BasicBlock>((--func.end())))
 			{
 				referal[block].IN = boundary;
-			print_bitvec(referal[block].IN);
 
 			}	
+			int count = 0;
 			while(converge== false){
 				converge =true;
-				int count = 0;
 				//if either sets a bitvector then make converge = false
-				for(Function::iterator FI = func.begin(),FE = func.end(); FI!=FE;--FE){
-					count++;
-					printf("%d\n", count);
-					BasicBlock* block = &*FE;
-					print_bitvec(referal[block].IN);
+				count++;
+				for(auto FI = func.getBasicBlockList().rbegin(),FE = func.getBasicBlockList().rend(); FE!=FI;++FI)
+				{
+					BasicBlock* block = &*FI;
 					if(!block){continue;}
 					std::vector<BitVector> v;
-					if (block == &*func.end())
+					if (block == &*(func.getBasicBlockList().rbegin()))
 					{
 						v.push_back(boundary);
 					}
 					for (succ_iterator sit = succ_begin(block), set = succ_end(block); sit != set; ++sit){ //enlist all pred
-					printf("succ_iterating\n");
 						BasicBlock* b = *sit;
 						if(b)
 						{
 							v.push_back(referal[b].OUT);
 						}
 					}
-					printf("succ_iterated\n");
-
-					print_bitvec(referal[block].IN);
-					referal[block].IN = meet_function(v); // do in 
-					print_bitvec(referal[block].IN);
-
-					printf("met func\n");
-					print_bitvec(referal[block].IN);
-					BitVector temp = transform_function(referal[block].IN , domain , block,referal); //transform
-					printf("transformed\n");
-
-					if (temp == referal[block].OUT){continue;} //check transform
-					converge = false; //if transforms then has not converged
-					print_bitvec(referal[block].IN);
-					print_bitvec(referal[block].OUT);
-					print_bitvec(boundary);
 					
+					referal[block].IN = meet_function(v); // do in 
+
+					BitVector temp = transform_function(referal[block].IN , domain , block,referal); //transform
+					if (temp == referal[block].OUT){
+						continue;
+					} //check transform
+					converge = false; //if transforms then has not converged
 					referal[block].OUT = temp;
+
 				}
+				printf("\nIteration #%d is complete...\n\n",count);
+
 
 			}
+	
 		}
 		
 		//below is the code for forward direction
